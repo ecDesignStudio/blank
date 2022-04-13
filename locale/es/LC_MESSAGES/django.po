@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-03 10:37+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: core/abstract.py:15
+msgid "active"
+msgstr ""
+
+#: core/abstract.py:32
+msgid "Finished"
+msgstr ""
+
+#: core/abstract.py:33
+msgid "On hold"
+msgstr ""
+
+#: core/abstract.py:34
+msgid "Published"
+msgstr ""
+
+#: core/abstract.py:35
+msgid "Draft"
+msgstr ""
+
+#: core/abstract.py:40
+msgid "Publication status"
+msgstr ""
+
+#: core/abstract.py:79
+msgid "meta keywords"
+msgstr ""
+
+#: core/abstract.py:84
+msgid "meta title"
+msgstr ""
+
+#: core/abstract.py:89
+msgid "meta description"
+msgstr ""
+
+#: core/abstract.py:140
+msgid "latitude"
+msgstr ""
+
+#: core/abstract.py:147
+msgid "longitude"
+msgstr ""
+
+#: core/abstract.py:165
+msgid "address"
+msgstr ""
+
+#: core/abstract.py:171
+msgid "state"
+msgstr ""
+
+#: core/abstract.py:177
+msgid "city"
+msgstr ""
+
+#: core/abstract.py:183
+msgid "postal code"
+msgstr ""
+
+#: core/components/i18n.py:20
+msgid "Español"
+msgstr ""
+
+#: core/components/i18n.py:21
+msgid "English"
+msgstr ""
+
+#: core/utils.py:95
+msgid "now"
+msgstr ""
+
+#: core/utils.py:116
+msgid "year"
+msgstr ""
+
+#: core/utils.py:117
+msgid "month"
+msgstr ""
+
+#: core/utils.py:118
+msgid "week"
+msgstr ""
+
+#: core/utils.py:119
+msgid "day"
+msgstr ""
+
+#: core/utils.py:120
+msgid "hour"
+msgstr ""
+
+#: core/utils.py:121
+msgid "minute"
+msgstr ""
+
+#: core/utils.py:122
+msgid "second"
+msgstr ""
+
+#: core/utils.py:125
+msgid "millisecond"
+msgstr ""
+
+#: core/utils.py:126
+msgid "microsecond"
+msgstr ""
+
+#: core/utils.py:163
+msgid "Max file size is {}MB"
+msgstr ""
+
+#: core/utils.py:171
+msgid "Unsupported file extension."
+msgstr ""
+
+#: templates/dynamic_preferences/form.html:12
+msgid "submit"
+msgstr ""
+
+#: templates/email/base.html:92
+msgid "hello"
+msgstr ""
+
+#: templates/email/base.html:157
+msgid "All rights reserved"
+msgstr ""
+
+#: templates/email/base.html:157
+msgid "we appreciate you"
+msgstr ""

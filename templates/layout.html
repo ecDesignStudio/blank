@@ -1,0 +1,96 @@
+<!doctype html>
+{% load meta %}
+{% load static %}
+{% load i18n %}
+{% load leaflet_tags %}
+
+<html {% meta_namespaces_schemaorg %}>
+  <head {% meta_namespaces %}>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="ecDesign Studio">
+      {% include "meta/meta.html" %}
+
+      <!-- Bootstrap CSS -->
+      <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" >
+      <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+
+      {% leaflet_js %}
+      {% leaflet_css %}
+
+      {% block css %}
+      {% endblock css %}
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+          <a class="navbar-brand" href="#!">Blank</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link" href="{% url 'frontend:home' %}">{% trans "home" %}</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'contact:home' %}">{% trans "contact" %}</a></li>
+                  {% if request.user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">{% trans "logout" %}</a></li>
+                  {% else %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">{% trans "register" %}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">{% trans "login" %}</a></li>
+                  {% endif %}
+              </ul>
+          </div>
+      </div>
+    </nav>
+    <header class="py-5 bg-light border-bottom mb-4">
+      {% block header %}
+        <div class="container">
+          <div class="text-center my-5">
+              <h1 class="fw-bolder">Welcome Home!</h1>
+              <p class="lead mb-0">A Bootstrap 5 starter layout for your next blog homepage</p>
+          </div>
+        </div>
+      {% endblock header %}
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8" id="content">
+          {% if messages %}
+            <ul class="messages">
+              {% for message in messages %}
+                  <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% block content %}
+            {% if user.is_authenticated %}
+                <h1>Welcome {{ user.username }}, you are loged in.. <a href="{% url 'logout' %}">salir</a></h1>
+            {% else %}
+                <h1>You are not logged in</h1>
+            {% endif %}
+          {% endblock content %}
+        </div>
+        <div class="col-lg-3" id="sidebar">
+          {% block sidebar %} sidebar {% endblock sidebar %}
+        </div>
+      </div>
+    </div>
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-end mb-1">
+          <a href="#">Back to top</a>
+        </p>
+        <p class="mb-1"> Blank &copy;</p>
+      </div>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <link href="{% static 'js/custom.js' %}" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    {% block js %}
+    {% endblock js %}
+  </body>
+</html>
+

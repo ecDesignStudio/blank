@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <!--Register-->
+    <div class="container py-5">
+        <h1>{% trans "register"|title %}</h1>
+        <form method="POST" id="register_form" accept-charset="utf-8">
+            {% csrf_token %}
+            {{ register_form|crispy }}
+            <button class="g-recaptcha btn_1 rounded btn-block mt-2" data-sitekey="{{ site_key }}" data-callback='onSubmit'>{% trans "Send" %}</button>
+        </form>
+        <p class="text-center">If you already have an account, <a href="{% url 'login' %}">login</a> instead.</p>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+       function onSubmit(token) {
+         document.getElementById("register_form").submit();
+       }
+    </script>
+{% endblock js %}

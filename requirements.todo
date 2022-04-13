@@ -1,0 +1,33 @@
+requirements:
+  ✔ translations @done (22-03-02 12:40)
+  ✔ model translations @done (22-03-02 12:40)
+  ✔ .env @done (22-03-02 12:41)
+  ✔ custom tags @done (22-03-02 12:41)
+  ✔ custom filters @done (22-03-02 12:41)
+  ✔ custom context @done (22-03-02 12:41)
+  ✔ debug toolbar @done (22-03-02 12:42)
+  ✔ django extensions @done (22-03-02 12:44)
+  ✔ django cleanup @done (22-03-02 18:58)
+  ✔ django extensions @done (22-03-02 18:58)
+  ✔ email classes @done (22-03-03 00:33)
+  ✔ settings divididos @done (22-03-03 00:34)
+  ✔ login / logout @done (22-03-03 11:35)
+  ✔ recover password @done (22-03-03 11:35)
+  ✔ register @done (22-03-03 11:35)
+  ✔ revisar dinamic preferences @done (22-03-03 11:42)
+  ✔ profile imagen @done (22-03-22 20:15)
+  ✔ thumbnails sorl @done (22-03-22 12:38)
+
+
+APPS:
+  ☐ page
+  ☐ blog
+  ☐ faq
+  ☐ news
+  ☐ portfolio
+  ☐ contact
+  ☐ menu (qr, cart, facture, payment)
+
+MODULOS:
+  ☐ qr
+  ☐ pdf
